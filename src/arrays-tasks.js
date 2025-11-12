@@ -131,6 +131,7 @@ function getAverage(arr) {
   if (arr.length === 0) {
     return 0;
   }
+
   const sum = arr.reduce((acc, num) => acc + num, 0);
   const average = sum / arr.length;
 
@@ -147,8 +148,9 @@ function getAverage(arr) {
  *    isSameLength(['orange', 'banana', 'cherry']) => true
  *    isSameLength(['cat', 'dog', 'elephant']) => false
  */
-function isSameLength(/* arr */) {
-  throw new Error('Not implemented');
+function isSameLength(arr) {
+  const first = arr[0].length;
+  return arr.every((str) => str.length === first);
 }
 
 /**
